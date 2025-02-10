@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webside</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .main {
+      width: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* ---first page ke style--- */
+
+    .under {
+      width: 65%;
+      background-color: #011e31;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .center {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+    }
+    .item1 {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px;
+    }
+    .container,
+    p,
+    h3 {
+      color: white;
+      margin-top: 10px;
+    }
+    .container h3 {
+      text-transform: lowercase;
+    }
+    .container img {
+      width: 150px;
+    }
+    .container input {
+      width: 90%;
+      height: 25px;
+      margin-top: 10px;
+      padding: 0 10px;
+      border: none;
+    }
+    .container button {
+      width: 95%;
+      height: 30px;
+      border: none;
+      margin-top: 10px;
+      padding: 10px 0px;
+    }
+
+    .item2 {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .item2 img {
+      width: 80%;
+    }
+
+    /*--- second page ke style--- */
+
+    .setting-section-upper {
+      width: 100%;
+      background-color: #01293b;
+      display: flex;
+      justify-content: center;
+    }
+    .setting-section {
+      width: 80%;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .setting-section h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .setting-items {
+      width: 50%;
+      padding: 20px 10px 0 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      flex: 1 0;
+      margin: 5px 3px 20px 0;
+      padding: 10px;
+      /* border: 1px solid #00aeef; */
+      border-radius: 5px;
+    }
+    .setting-items img {
+      width: 40px;
+      height: auto;
+    }
+    .setting {
+      display: flex;
+      width: 100%;
+      /* flex-wrap: wrap; */
+    }
+    .setting-section button {
+      width: 40%;
+      border: none;
+      margin: 20px 0;
+      padding: 10px 0;
+      border-radius: 5px;
+    }
+    .setting-section button:hover {
+      background-color: transparent;
+      border: 2px solid #00aeef;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ---threed page ke style--- */
+
+    .event-section {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .event-section h3 {
+      margin-bottom: 20px;
+    }
+    .event {
+      display: flex;
+      /* width: 100%; */
+    }
+    .event-items {
+      width: 33%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px 7px 20px 0;
+      padding: 15px 5px 10px 5px;
+      border: 1px solid #00aeef;
+      border-radius: 10px;
+      position: relative;
+    }
+    .number {
+      color: #00aeef;
+      background-color: #011e31;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 8px;
+      position: absolute;
+      top: -26px;
+      left: 12px;
+    }
+
+    /* fourth page ke style */
+
+    .center-upper-fourth {
+      width: 100%;
+      background-color: #01293b;
+      display: flex;
+      justify-content: center;
+    }
+
+    .center-upper-fourth .container {
+      margin-top: 50px;
+    }
+
+    /* fifth page ke style */
+
+    .time-section {
+      width: 80%;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .time-items {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .time {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+    }
+    .time-number {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .time-number h4 {
+      color: white;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .time-number h3 {
+      color: #00aeef;
+      font-size: 50px;
+      margin-top: 10px;
+    }
+    .time-items button {
+      width: 40%;
+      border: none;
+      margin: 20px 0;
+      padding: 10px 0;
+      border-radius: 5px;
+      background-color: #00aeef;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* footer ke style */
+
+    .footer-section {
+      width: 100%;
+      background-color: #01293b;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 400px) {
+      .time-section {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .setting {
+        flex-direction: column;
+        align-items: center;
+      }
+      .under {
+        width: 100%;
+      }
+      .center {
+        flex-direction: column;
+        align-items: center;
+      }
+      .item1 {
+        order: 1;
+        width: 100%;
+      }
+      .item2 {
+        width: 100%;
+        margin-top: 10px;
+      }
+      .event {
+        flex-direction: column;
+        align-items: center;
+      }
+      .event-items {
+        width: 60%;
+      }
+      .time {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .setting {
+        flex-wrap: wrap;
+      }
+      .setting-items {
+        min-width: 150px;
+        margin: 2px;
+      }
+      .time {
+        width: 80%;
+      }
+      .time-number h4 {
+        font-size: 11px;
+      }
+      .time-number h3 {
+        font-size: 35px;
+      }
+    }
+  </style>
+  <body>
+    <div class="main">
+      <!-- first page -->
+      <div class="under">
+        <div class="center">
+          <div class="item1">
+            <div class="container">
+              <img src="/logo.png" alt="logo" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                urna sapien, fringilla et faucibus non.
+              </p>
+              <h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                urna sapien, fringilla et faucibus non.
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                urna sapien, fringilla et faucibus non.
+              </p>
+              <input type="text" placeholder="Full name" />
+              <input type="email" placeholder="Email" />
+              <button>submit</button>
+            </div>
+          </div>
+          <div class="item2">
+            <img
+              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+              alt="people"
+            />
+          </div>
+        </div>
+        <!-- second page -->
+        <div class="setting-section-upper">
+          <div class="setting-section">
+            <h3>Headline of benefits</h3>
+            <div class="setting">
+              <div class="setting-items">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+                  alt="pic"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                  urna sapien, fringilla et faucibus non.
+                </p>
+              </div>
+              <div class="setting-items">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3063/3063825.png"
+                  alt="pic"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                  urna sapien, fringilla et faucibus non.
+                </p>
+              </div>
+              <div class="setting-items">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
+                  alt="pic"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                  urna sapien, fringilla et faucibus non.
+                </p>
+              </div>
+              <div class="setting-items">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+                  alt="pic"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                  urna sapien, fringilla et faucibus non.
+                </p>
+              </div>
+            </div>
+            <button>I WANT TO PARTICIPATE</button>
+          </div>
+        </div>
+        <!-- threed page -->
+        <div class="event-section">
+          <h3>Events</h3>
+          <div class="event">
+            <div class="event-items">
+              <div class="number">01</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                vitae.
+              </p>
+            </div>
+            <div class="event-items">
+              <div class="number">02</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                vitae. Proin urna sapien.
+              </p>
+            </div>
+            <div class="event-items">
+              <div class="number">03</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                vitae. Proin urna sapien, fringilla et faucibus non.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fourth page -->
+        <div class="center-upper-fourth">
+          <div class="center">
+            <div class="item1">
+              <div class="container">
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                  urna sapien, fringilla et faucibus non.
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                  urna sapien, fringilla et faucibus non.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                  urna sapien, fringilla et faucibus non.
+                </p>
+              </div>
+            </div>
+            <div class="item2">
+              <img src="/people2.png" alt="people" />
+            </div>
+          </div>
+        </div>
+        <!-- fifth page -->
+        <div class="time-section">
+          <h3>Time</h3>
+          <div class="time-items">
+            <div class="time">
+              <div class="time-number">
+                <h3>11</h3>
+                <h4>Date</h4>
+              </div>
+              <div class="time-number">
+                <h3>10</h3>
+                <h4>Hours</h4>
+              </div>
+              <div class="time-number">
+                <h3>15</h3>
+                <h4>Minutes</h4>
+              </div>
+              <div class="time-number">
+                <h3>19</h3>
+                <h4>Seconds</h4>
+              </div>
+            </div>
+            <button>Press</button>
+          </div>
+        </div>
+        <!-- footer line -->
+        <div class="footer-section">
+          <p>&#169; 2025 force</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
